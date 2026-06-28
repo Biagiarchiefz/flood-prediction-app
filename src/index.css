@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+/* ============================================================
+   TEMA NEO BRUTALISM (Tailwind v4, CSS-first via @theme)
+   Mendaftarkan token sebagai variabel tema sehingga otomatis
+   menjadi utilitas Tailwind, mis:
+     --color-primary  -> bg-primary, text-primary, border-primary
+     --shadow-brutal  -> shadow-brutal
+   ============================================================ */
+@theme {
+  /* Tipografi */
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+
+  /* Palet warna (terinspirasi branding kuning energik) */
+  --color-primary: #ffd54a;
+  --color-primary-hover: #f7c600;
+  --color-bg: #fffdf5;
+  --color-surface: #ffffff;
+  --color-ink: #111111;
+  --color-muted: #555555;
+  --color-success: #22c55e;
+  --color-danger: #ef4444;
+
+  /* Bayangan keras khas Neo Brutalism (offset solid, tanpa blur) */
+  --shadow-brutal-sm: 2px 2px 0 0 #111111;
+  --shadow-brutal: 4px 4px 0 0 #111111;
+  --shadow-brutal-lg: 6px 6px 0 0 #111111;
+}
+
+/* Latar & warna teks dasar halaman */
+body {
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
