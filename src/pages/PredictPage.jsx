@@ -84,7 +84,7 @@ function PredictPage() {
       <PageHeader
         icon={Activity}
         title="Form Prediksi Banjir"
-        subtitle="Isi ke-20 faktor berikut dengan skor 0–16, lalu jalankan prediksi."
+        subtitle="Isi ke-20 faktor risiko berikut sesuai rentang nilai masing-masing, lalu jalankan prediksi."
       />
 
       <Card as="form" onSubmit={handleSubmit}>
