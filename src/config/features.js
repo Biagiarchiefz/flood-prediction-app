@@ -3,30 +3,31 @@
  *
  * - `name`  : HARUS sama persis dengan nama kolom saat training (dipakai backend).
  * - `label` : teks ramah-pengguna yang ditampilkan di form.
+ * - `max`   : nilai maksimum yang pernah ada di data training (dari data.describe()).
+ *             Tiap fitur bisa berbeda — jangan disamakan semua ke 16.
  *
- * Menaruh daftar ini di satu tempat membuat form bisa dibuat otomatis
- * (looping) tanpa menulis 20 input satu per satu secara manual.
+ * Sumber max: data.describe() pada dataset training (1.117.957 baris).
  */
 
 export const FEATURES = [
-  { name: "MonsoonIntensity", label: "Intensitas Musim Hujan" },
-  { name: "TopographyDrainage", label: "Drainase Topografi" },
-  { name: "RiverManagement", label: "Pengelolaan Sungai" },
-  { name: "Deforestation", label: "Deforestasi" },
-  { name: "Urbanization", label: "Urbanisasi" },
-  { name: "ClimateChange", label: "Perubahan Iklim" },
-  { name: "DamsQuality", label: "Kualitas Bendungan" },
-  { name: "Siltation", label: "Sedimentasi (Pendangkalan)" },
-  { name: "AgriculturalPractices", label: "Praktik Pertanian" },
-  { name: "Encroachments", label: "Alih Fungsi Lahan" },
-  { name: "IneffectiveDisasterPreparedness", label: "Kesiapsiagaan Bencana Lemah" },
-  { name: "DrainageSystems", label: "Sistem Drainase" },
-  { name: "CoastalVulnerability", label: "Kerentanan Pesisir" },
-  { name: "Landslides", label: "Tanah Longsor" },
-  { name: "Watersheds", label: "Daerah Aliran Sungai" },
-  { name: "DeterioratingInfrastructure", label: "Penurunan Kualitas Infrastruktur" },
-  { name: "PopulationScore", label: "Skor Kepadatan Populasi" },
-  { name: "WetlandLoss", label: "Hilangnya Lahan Basah" },
-  { name: "InadequatePlanning", label: "Perencanaan Tidak Memadai" },
-  { name: "PoliticalFactors", label: "Faktor Politik" },
+  { name: "MonsoonIntensity",              label: "Intensitas Musim Hujan",              max: 16 },
+  { name: "TopographyDrainage",            label: "Drainase Topografi",                  max: 18 },
+  { name: "RiverManagement",               label: "Pengelolaan Sungai",                  max: 16 },
+  { name: "Deforestation",                 label: "Deforestasi",                         max: 17 },
+  { name: "Urbanization",                  label: "Urbanisasi",                          max: 17 },
+  { name: "ClimateChange",                 label: "Perubahan Iklim",                     max: 17 },
+  { name: "DamsQuality",                   label: "Kualitas Bendungan",                  max: 16 },
+  { name: "Siltation",                     label: "Sedimentasi (Pendangkalan)",          max: 16 },
+  { name: "AgriculturalPractices",         label: "Praktik Pertanian",                   max: 16 },
+  { name: "Encroachments",                 label: "Alih Fungsi Lahan",                   max: 18 },
+  { name: "IneffectiveDisasterPreparedness", label: "Kesiapsiagaan Bencana Lemah",       max: 16 },
+  { name: "DrainageSystems",               label: "Sistem Drainase",                     max: 17 },
+  { name: "CoastalVulnerability",          label: "Kerentanan Pesisir",                  max: 17 },
+  { name: "Landslides",                    label: "Tanah Longsor",                       max: 16 },
+  { name: "Watersheds",                    label: "Daerah Aliran Sungai",                max: 16 },
+  { name: "DeterioratingInfrastructure",   label: "Penurunan Kualitas Infrastruktur",    max: 17 },
+  { name: "PopulationScore",               label: "Skor Kepadatan Populasi",             max: 16 },
+  { name: "WetlandLoss",                   label: "Hilangnya Lahan Basah",               max: 19 },
+  { name: "InadequatePlanning",            label: "Perencanaan Tidak Memadai",           max: 16 },
+  { name: "PoliticalFactors",              label: "Faktor Politik",                      max: 16 },
 ];

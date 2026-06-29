@@ -94,10 +94,10 @@ function PredictPage() {
               key={feature.name}
               id={feature.name}
               name={feature.name}
-              label={feature.label}
+              label={`${feature.label} (0–${feature.max})`}
               type="number"
               min="0"
-              max="16"
+              max={feature.max}
               step="1"
               value={values[feature.name]}
               onChange={handleChange}
